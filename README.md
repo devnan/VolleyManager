@@ -1,5 +1,5 @@
 # VolleyManager
-A simple li using Volley,OkHttp3 and Gson.
+A simple example using Volley,OkHttp3 and Gson.
 
 ![asd](https://github.com/ALLENnan/VolleyManager/blob/master/screenshot/screenshot.jpg)
 
@@ -18,7 +18,6 @@ compile 'com.squareup.okio:okio:1.6.0'
                     @Override
                     public void onResponse(Person person) {
                         Log.v(TAG, person.toString());
-                        mTextview.setText(person.toString());
                     }
                 }, new Response.ErrorListener() {
                     @Override
@@ -32,4 +31,4 @@ compile 'com.squareup.okio:okio:1.6.0'
                 (mImageview, Urls.mImageUrl, R.mipmap.ic_default, R.mipmap.ic_error);
 ```
 #Blog
-![here](http://allenlin.leanote.com/post/volleyokhttpgson)
+[here](http://allenlin.leanote.com/post/volleyokhttpgson)
