@@ -36,6 +36,9 @@ public class VolleyManager {
                 new LruBitmapCache(context));
     }
 
+    /**
+     * @return VolleyManager instance
+     */
     public static synchronized VolleyManager newInstance() {
         if (mVolleyManager == null) {
             mVolleyManager = new VolleyManager(App.getContext());
@@ -47,16 +50,32 @@ public class VolleyManager {
         return mRequestQueue.add(request);//添加请求到队列
     }
 
-
-    public StringRequest StrRequest(String url, Response.Listener<String> listener, Response.ErrorListener errorListener) {
+    /**
+     * @param tag
+     * @param url
+     * @param listener
+     * @param errorListener
+     * @return
+     */
+    public StringRequest StrRequest(Object tag, String url, Response.Listener<String> listener, Response.ErrorListener errorListener) {
         StringRequest request = new StringRequest(url, listener, errorListener);
+        request.setTag(tag);
         add(request);
         return request;
     }
 
-    public StringRequest StrRequest(int method, String url, Response.Listener<String> listener,
+    /**
+     * @param tag
+     * @param method
+     * @param url
+     * @param listener
+     * @param errorListener
+     * @return
+     */
+    public StringRequest StrRequest(Object tag, int method, String url, Response.Listener<String> listener,
                                     Response.ErrorListener errorListener) {
         StringRequest request = new StringRequest(method, url, listener, errorListener);
+        request.setTag(tag);
         add(request);
         return request;
     }
@@ -64,19 +83,22 @@ public class VolleyManager {
     /**
      * ImageRequest
      *
+     * @param tag
      * @param url
      * @param listener
      * @param maxWidth
      * @param maxHeight
+     * @param scaleType
      * @param decodeConfig
      * @param errorListener
      * @return
      */
-    public ImageRequest ImageRequest(String url, Response.Listener<Bitmap> listener,
+    public ImageRequest ImageRequest(Object tag, String url, Response.Listener<Bitmap> listener,
                                      int maxWidth, int maxHeight, ImageView.ScaleType scaleType,
                                      Bitmap.Config decodeConfig, Response.ErrorListener errorListener) {
         ImageRequest request = new ImageRequest(url, listener, maxWidth, maxHeight, scaleType,
                 decodeConfig, errorListener);
+        request.setTag(tag);
         add(request);
         return request;
     }
@@ -115,8 +137,9 @@ public class VolleyManager {
     }
 
     /**
-     * Get封装
+     * Get
      *
+     * @param tag
      * @param url
      * @param clazz
      * @param listener
@@ -129,13 +152,13 @@ public class VolleyManager {
         GsonRequest<T> request = new GsonRequest<T>(url, clazz, listener, errorListener);
         request.setTag(tag);
         add(request);
-
         return request;
     }
 
     /**
-     * Post封装
+     * Post
      *
+     * @param tag
      * @param params
      * @param url
      * @param clazz

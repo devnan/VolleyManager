@@ -36,5 +36,8 @@ public class Person {
         return this.last_name;
     }
 
-
+    @Override
+    public String toString() {
+        return this.first_name + " " + last_name + " " + gender;
+    }
 }
