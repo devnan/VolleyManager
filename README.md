@@ -14,7 +14,7 @@ compile 'com.squareup.okio:okio:1.6.0'
 #Sample  
 ####get方法示例
 ```java
- VolleyManager.newInstance().GsonGetRequest(TAG, Urls.mJsonUrl, Person.class,
+        VolleyManager.newInstance().GsonGetRequest(TAG, Urls.mJsonUrl, Person.class,
                 new Response.Listener<Person>() {
                     @Override
                     public void onResponse(Person person) {
@@ -80,9 +80,9 @@ compile 'com.squareup.okio:okio:1.6.0'
 ```
 ####加载圆形图片示例(使用了[CircleImageView](https://github.com/hdodenhof/CircleImageView)库)
 ```java
-@Bind(R.id.circleimageview)
-CircleImageView mCircleimageview;
-VolleyManager.newInstance().ImageRequest(TAG, Urls.mImageUrl,
+        @Bind(R.id.circleimageview)
+        CircleImageView mCircleimageview;
+        VolleyManager.newInstance().ImageRequest(TAG, Urls.mImageUrl,
                 new Response.Listener<Bitmap>() {
                     @Override
                     public void onResponse(Bitmap bitmap) {
@@ -93,7 +93,7 @@ VolleyManager.newInstance().ImageRequest(TAG, Urls.mImageUrl,
                     public void onErrorResponse(VolleyError error) {
                         mCircleimageview.setImageResource(R.mipmap.ic_error);
                     }
-                });
+
 ```
 
 ####具体看项目的sample
