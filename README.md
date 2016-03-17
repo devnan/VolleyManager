@@ -1,7 +1,7 @@
 # VolleyManager
 安卓 Volley+OkHttp3+Gson 开源库的封装  
 
-![asd](https://github.com/ALLENnan/VolleyManager/blob/master/screenshot/screenshot.jpg)
+![asd](https://github.com/ALLENnan/VolleyManager/blob/master/screenshot/image.jpg)
 
 #Gradle
 ```java
