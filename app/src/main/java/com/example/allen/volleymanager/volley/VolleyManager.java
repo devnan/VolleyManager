@@ -9,9 +9,12 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.ImageRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.allen.volleymanager.App;
+
+import org.json.JSONObject;
 
 import java.util.Map;
 
@@ -137,7 +140,7 @@ public class VolleyManager {
     }
 
     /**
-     * Get
+     * Get方法
      *
      * @param tag
      * @param url
@@ -156,7 +159,7 @@ public class VolleyManager {
     }
 
     /**
-     * Post
+     * Post方式1：Map参数
      *
      * @param tag
      * @param params
@@ -167,12 +170,31 @@ public class VolleyManager {
      * @param <T>
      * @return
      */
-    public <T> GsonRequest<T> GsonPostRequest(Object tag, Map<String, String> params, String url, Class<T> clazz, Response.Listener<T> listener,
+    public <T> GsonRequest<T> GsonPostRequest(Object tag, Map<String, String> params, String url,
+                                              Class<T> clazz, Response.Listener<T> listener,
                                               Response.ErrorListener errorListener) {
         GsonRequest<T> request = new GsonRequest<T>(Request.Method.POST, params, url, clazz, listener, errorListener);
         request.setTag(tag);
         add(request);
         return request;
+    }
+
+    /**
+     * Post方式2：json字符串
+     *
+     * @param url
+     * @param jsonObject
+     * @param listener
+     * @param errorListener
+     */
+    public void PostjsonRequest(Object tag, String url, JSONObject jsonObject, Response.Listener<JSONObject> listener,
+                                    Response.ErrorListener errorListener) {
+        JsonObjectRequest jsonObjectRequest;
+        jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject,
+                listener, errorListener);
+        jsonObjectRequest.setTag(tag);
+        add(jsonObjectRequest);
+
     }
 
     /**
