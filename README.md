@@ -1,5 +1,5 @@
 # VolleyManager
-A simple example using Volley,OkHttp3 and Gson.
+安卓 Volley+OkHttp3+Gson 开源库的封装  
 
 ![asd](https://github.com/ALLENnan/VolleyManager/blob/master/screenshot/screenshot.jpg)
 
@@ -32,3 +32,6 @@ compile 'com.squareup.okio:okio:1.6.0'
 ```
 #Blog
 [here](http://allenlin.leanote.com/post/volleyokhttpgson)
+
+#其他  
+有问题欢迎提交issue或者提交pull requests  
