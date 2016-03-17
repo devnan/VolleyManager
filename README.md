@@ -5,14 +5,15 @@
 
 #Gradle
 ```java
-compile 'com.jakewharton:butterknife:7.0.1'
-compile 'com.mcxiaoke.volley:library:1.0.19'
-compile 'com.google.code.gson:gson:2.6.1'
-compile 'com.squareup.okhttp3:okhttp:3.1.2'
-compile 'com.squareup.okio:okio:1.6.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.google.code.gson:gson:2.6.1'
+    compile 'com.squareup.okhttp3:okhttp:3.1.2'
+    compile 'com.squareup.okio:okio:1.6.0'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
 ```
 #Sample  
-####get方法示例
+####1.get方法示例
 ```java
         VolleyManager.newInstance().GsonGetRequest(TAG, Urls.mJsonUrl, Person.class,
                 new Response.Listener<Person>() {
@@ -28,7 +29,7 @@ compile 'com.squareup.okio:okio:1.6.0'
                 });
 ```
 
-####post map参数示例
+####2.post map参数示例
 ```java
         Map<String, String> map = new HashMap<String, String>();
         map.put("username", "allen");
@@ -49,7 +50,7 @@ compile 'com.squareup.okio:okio:1.6.0'
                 });
 ```
 
-####post json对象示例
+####3.post json对象示例
 ```java
         JSONObject jsonObject = new JSONObject();
         try {
@@ -73,12 +74,12 @@ compile 'com.squareup.okio:okio:1.6.0'
 
 ```
 
-####加载图片示例
+####4.加载图片示例
 ```java
   VolleyManager.newInstance().ImageLoaderRequest
                 (mImageview, Urls.mImageUrl, R.mipmap.ic_default, R.mipmap.ic_error);
 ```
-####加载圆形图片示例(使用了[CircleImageView](https://github.com/hdodenhof/CircleImageView)库)
+####5.加载圆形图片示例(使用了[CircleImageView](https://github.com/hdodenhof/CircleImageView)库)
 ```java
         @Bind(R.id.circleimageview)
         CircleImageView mCircleimageview;
@@ -102,4 +103,4 @@ compile 'com.squareup.okio:okio:1.6.0'
 [here](http://allenlin.leanote.com/post/volleyokhttpgson)
 
 #其他
-有问题欢迎提交issue或者提交pull requests 
+有问题欢迎提交issue或者提交pull request
