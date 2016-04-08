@@ -48,9 +48,9 @@ public class VolleyManager {
      *
      * @return VolleyManager instance
      */
-    public static synchronized VolleyManager newInstance() {
-
+    public static VolleyManager newInstance() {
         return VolleyManagerHolder.INSTANCE;
+
     }
 
     private <T> Request<T> add(Request<T> request) {
