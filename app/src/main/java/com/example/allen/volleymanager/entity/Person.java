@@ -3,6 +3,7 @@ package com.example.allen.volleymanager.entity;
 /**
  * Created by Allen Lin on 2016/02/17.
  */
+//实体类
 public class Person {
 
     private String gender;

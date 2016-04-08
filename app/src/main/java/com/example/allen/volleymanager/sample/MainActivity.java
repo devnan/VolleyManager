@@ -1,7 +1,6 @@
 package com.example.allen.volleymanager.sample;
 
 import android.graphics.Bitmap;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 new Response.Listener<Person>() {
                     @Override
                     public void onResponse(Person person) {
-                        Log.v(TAG, "get方法: "+person.toString());
+                        Log.v(TAG, "get方法: " + person.toString());
                         mTextview.setText(person.toString());
                     }
                 }, new Response.ErrorListener() {
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 new Response.Listener<Person>() {
                     @Override
                     public void onResponse(Person person) {
-                        Log.v(TAG, "post map参数: "+person.toString());
+                        Log.v(TAG, "post map参数: " + person.toString());
                     }
                 }, new Response.ErrorListener() {
                     @Override
@@ -95,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             jsonObject.put("username", "allen");
             jsonObject.put("password", "linqinan");
-            Log.v(TAG, "本地json打印: "+jsonObject.toString());
+            Log.v(TAG, "本地json打印: " + jsonObject.toString());
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -103,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject jsonObject) {
-                        Log.v(TAG, "post json对象: "+ jsonObject.toString());
+                        Log.v(TAG, "post json对象: " + jsonObject.toString());
                     }
                 }, new Response.ErrorListener() {
                     @Override

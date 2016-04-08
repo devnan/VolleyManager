@@ -28,10 +28,14 @@ public class VolleyManager {
     private RequestQueue mRequestQueue;
     private ImageLoader mImageLoader;
 
+    private static class VolleyManagerHolder {
+        private static final VolleyManager INSTANCE = new VolleyManager(App.getContext());
+    }
+
     /**
      * @param context
      */
-    public VolleyManager(Context context) {
+    private VolleyManager(Context context) {
 
         mRequestQueue = Volley.newRequestQueue(context, new OkHttp3Stack(new OkHttpClient()));
 
@@ -40,13 +44,13 @@ public class VolleyManager {
     }
 
     /**
+     * 单例模式（静态内部类）
+     *
      * @return VolleyManager instance
      */
     public static synchronized VolleyManager newInstance() {
-        if (mVolleyManager == null) {
-            mVolleyManager = new VolleyManager(App.getContext());
-        }
-        return mVolleyManager;
+
+        return VolleyManagerHolder.INSTANCE;
     }
 
     private <T> Request<T> add(Request<T> request) {
@@ -107,7 +111,7 @@ public class VolleyManager {
     }
 
     /**
-     * ImageLoader
+     * ImageLoader 图片默认大小
      *
      * @param imageView
      * @param imgViewUrl
@@ -123,7 +127,7 @@ public class VolleyManager {
 
 
     /**
-     * ImageLoader指定图片大小
+     * ImageLoader 指定图片大小
      *
      * @param imageView
      * @param imgViewUrl
@@ -188,7 +192,7 @@ public class VolleyManager {
      * @param errorListener
      */
     public void PostjsonRequest(Object tag, String url, JSONObject jsonObject, Response.Listener<JSONObject> listener,
-                                    Response.ErrorListener errorListener) {
+                                Response.ErrorListener errorListener) {
         JsonObjectRequest jsonObjectRequest;
         jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject,
                 listener, errorListener);
