@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.example.allen.volleymanager.R;
-import com.example.allen.volleymanager.Config.Urls;
+import com.example.allen.volleymanager.config.Urls;
 import com.example.allen.volleymanager.entity.Person;
 import com.example.allen.volleymanager.volley.VolleyManager;
 
