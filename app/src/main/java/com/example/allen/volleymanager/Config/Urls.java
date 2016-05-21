@@ -1,4 +1,4 @@
-package com.example.allen.volleymanager.Config;
+package com.example.allen.volleymanager.config;
 
 /**
  * Created by Allen Lin on 2016/02/21.
