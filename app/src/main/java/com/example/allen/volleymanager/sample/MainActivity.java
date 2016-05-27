@@ -20,17 +20,17 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "MainActivity";
-    @Bind(R.id.textview)
+    @BindView(R.id.textview)
     TextView mTextview;
-    @Bind(R.id.imageview)
+    @BindView(R.id.imageview)
     ImageView mImageview;
-    @Bind(R.id.circleimageview)
+    @BindView(R.id.circleimageview)
     CircleImageView mCircleimageview;
 
     @Override
