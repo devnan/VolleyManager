@@ -5,7 +5,8 @@
 
 #Gradle
 ```java
-    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.jakewharton:butterknife:8.0.1'   
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'   
     compile 'com.mcxiaoke.volley:library:1.0.19'
     compile 'com.google.code.gson:gson:2.6.1'
     compile 'com.squareup.okhttp3:okhttp:3.1.2'
