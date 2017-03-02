@@ -1,4 +1,5 @@
 # VolleyManager
+【回过头来看看自己写过的代码，发现自己有点地方的封装似乎不太合理，后面有时间优化一下】 
 安卓 Volley+OkHttp3+Gson 开源库的封装（暂没有提供对Https的支持，只适合不要求传输安全性的项目）
 
 ![asd](https://github.com/ALLENnan/VolleyManager/blob/master/screenshot/image.jpg)
