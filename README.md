@@ -4,7 +4,7 @@
 
 ![asd](https://github.com/ALLENnan/VolleyManager/blob/master/screenshot/image.jpg)
 
-#Gradle
+# Gradle
 ```java
     compile 'com.jakewharton:butterknife:8.0.1'   
     apt 'com.jakewharton:butterknife-compiler:8.0.1'   
@@ -14,8 +14,8 @@
     compile 'com.squareup.okio:okio:1.6.0'
     compile 'de.hdodenhof:circleimageview:2.0.0'
 ```
-#Sample  
-####1.get方法示例
+# Sample  
+#### 1.get方法示例
 ```java
         VolleyManager.newInstance().GsonGetRequest(TAG, Urls.mJsonUrl, Person.class,
                 new Response.Listener<Person>() {
@@ -31,7 +31,7 @@
                 });
 ```
 
-####2.post map参数示例
+#### 2.post map参数示例
 ```java
         Map<String, String> map = new HashMap<String, String>();
         map.put("username", "allen");
@@ -52,7 +52,7 @@
                 });
 ```
 
-####3.post json对象示例
+#### 3.post json对象示例
 ```java
         JSONObject jsonObject = new JSONObject();
         try {
@@ -76,12 +76,12 @@
 
 ```
 
-####4.加载图片示例
+#### 4.加载图片示例
 ```java
   VolleyManager.newInstance().ImageLoaderRequest
                 (mImageview, Urls.mImageUrl, R.mipmap.ic_default, R.mipmap.ic_error);
 ```
-####5.加载圆形图片示例(使用了[CircleImageView](https://github.com/hdodenhof/CircleImageView)库)
+#### 5.加载圆形图片示例(使用了[CircleImageView](https://github.com/hdodenhof/CircleImageView)库)
 ```java
         @Bind(R.id.circleimageview)
         CircleImageView mCircleimageview;
@@ -99,10 +99,10 @@
 
 ```
 
-####具体看项目的sample
+#### 具体看项目的sample
 
-#Blog
+# Blog
 [here](http://www.jianshu.com/p/b022eed6b427)
 
-#其他
+# 其他
 有问题欢迎提交issue或者提交pull request
