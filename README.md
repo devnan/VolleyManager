@@ -1,5 +1,5 @@
 # VolleyManager
-【此项目不建议使用了，推荐使用Retrofit+OkHTTP】   
+【此项目完成于毕业前，由于学识有限，有些地方可能不合理，不建议使用了，推荐使用Retrofit+OkHTTP】   
 
  安卓 Volley+OkHttp3+Gson 开源库的封装（暂没有提供对Https的支持，只适合不要求传输安全性的项目）
 
