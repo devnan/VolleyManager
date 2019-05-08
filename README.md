@@ -1,7 +1,7 @@
 # VolleyManager
 【注：此轮子完成于毕业之前，已不再维护，推荐使用Retrofit+OkHttp】 
 
- 安卓 Volley+OkHttp3+Gson 开源库的封装（暂没有提供对Https的支持，只适合不要求传输安全性的项目）
+ 安卓 Volley+OkHttp3+Gson 开源库的封装（暂没有提供对Https的支持）
 
 ![asd](https://github.com/ALLENnan/VolleyManager/blob/master/screenshot/image.jpg)
 
